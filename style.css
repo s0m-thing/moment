@@ -1,3 +1,4 @@
+/* 노말라이즈 */
 body, ul, li {
 	margin: 0;
 	padding: 0;
@@ -9,9 +10,19 @@ a {
 	text-decoration: none;
 }
 
+/* 라이브러리 */
+.w-100 {
+    width: 100%;
+}
+
+/* 변수 */
+:root {
+    --color-darkgray: rgb(37, 37, 37);
+    --color-gray: 
+}
+
 
 header {
-    width: 100%;
     background-color: #faf9f6;
     box-sizing: border-box;
     border-bottom: 1px solid rgb(216, 216, 216);
@@ -21,7 +32,7 @@ header {
     z-index: 50;
 }
 
-header > .top {
+header > .utility_bar {
     max-width: 1440px;
     margin: 0 auto;
     padding: 8px 2px;
@@ -33,16 +44,16 @@ header > .top {
     border-bottom: 1px solid rgb(235, 235, 235);
 }
 
-header > .top .menu_1 {
+header > .utility_bar .menu_1 {
     cursor: pointer;
     transition: all .3s;
 }
 
-header > .top .menu_1:last-child {
+header > .utility_bar .menu_1:last-child {
     margin-left: 1.5em;
 }
 
-header > .top .menu_1:hover {
+header > .utility_bar .menu_1:hover {
     color: rgb(37, 37, 37)
 }
 
@@ -75,25 +86,27 @@ header > .main_header > .gnb > ul {
 
 header > .main_header > .gnb > ul > li > a {
     display: block;
-    padding: 20px;
+    padding: 40px;
     color: gray;
     font-size: 14px;
+    font-weight: bold;
     transition: color .3s;
 }
 
 header > .main_header > .gnb > ul > li > a:hover {
-    color: #111;
+    color: rgb(37, 37, 37);
 }
 
 header > .main_header > .holder {
     display: flex;
     align-items: center;
     margin-left: 1.5rem;
-    color: rgb(63, 63, 63);
+    color: gray;
     gap: 20px;
 }
 
 header > .main_header > .holder > .icon {
+    color: rgb(37, 37, 37);
     cursor: pointer;
     transition: color .3s;
 }
@@ -110,7 +123,7 @@ header > .main_header > .holder > .icon_cart > .circle {
     position: absolute;
     top: -5px;
     left: 15px;
-    background-color: rgb(63, 63, 63);
+    background-color: rgb(37, 37, 37);
     width: 14px;
     height: 14px;
     border-radius: 50px;
@@ -119,4 +132,55 @@ header > .main_header > .holder > .icon_cart > .circle {
     align-items: center;
     color: #fff;
     font-size: 12px;
+}
+
+.hero_banner {
+    height: 85vh;
+    background-color: #ecebe6;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero_banner > .bg {
+    position: absolute;
+
+}
+
+.hero_banner > .txt_box {
+    z-index: 10;
+    text-align: center;
+}
+
+.hero_banner > .txt_box > p {
+    font-size: 10px;
+    color: ;
+}
+
+.hero_banner > .txt_box > h2 {
+    font-size: ;
+    color: ;
+    margin-bottom: ;
+}
+
+.hero_banner > .txt_box > button {
+    border: 1px solid gray;
+    padding: 12px 12px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.hero_banner > .txt_box > button:hover {
+    background-color: black;
+    color: white;
+}
+
+.hero_banner > .arr {
+    position: absolute;
+    bottom: 100px;
 }
