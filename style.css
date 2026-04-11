@@ -1,8 +1,32 @@
+/* 폰트 불러오기 */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+
 /* 노말라이즈 */
 body, ul, li {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+    font-family: 'Pretendard';
 }
 
 a {
@@ -17,15 +41,27 @@ a {
 
 /* 변수 */
 :root {
-    --color-darkgray: rgb(37, 37, 37);
-    --color-gray: 
+    --color-darkgray: #6B7280;
+    --color-gray: #9CA3AF;
+    --color-black: #111111;
+    --color-white: #fff;
+    --color-beige: #faf9f6;
+    --border-gray: #ebebeb;
+    --font-size-small: 10px;
+    --font-size-medium: 14px;
+    --font-size-large: 30px;
+    --max-width: 1440px;
 }
 
+h2 {
+    font-weight: 400;
+}
 
+/* 헤더 시작 */
 header {
-    background-color: #faf9f6;
+    background-color: var(--color-beige);
     box-sizing: border-box;
-    border-bottom: 1px solid rgb(216, 216, 216);
+    border-bottom: 1px solid var(--border-gray);
     position: sticky;
     top: 0;
     left: 0;
@@ -33,15 +69,15 @@ header {
 }
 
 header > .utility_bar {
-    max-width: 1440px;
+    max-width: var(--max-width);
     margin: 0 auto;
     padding: 8px 2px;
     display: flex;
     justify-content: space-between;
-    font-size: 10px;
-    color: gray;
+    font-size: var(--font-size-small);
+    color: var(--color-gray);
     box-sizing: border-box;
-    border-bottom: 1px solid rgb(235, 235, 235);
+    border-bottom: 1px solid var(--border-gray);
 }
 
 header > .utility_bar .menu_1 {
@@ -54,11 +90,11 @@ header > .utility_bar .menu_1:last-child {
 }
 
 header > .utility_bar .menu_1:hover {
-    color: rgb(37, 37, 37)
+    color: var(--color-darkgray);
 }
 
 header > .main_header {
-    max-width: 1440px;
+    max-width: var(--max-width);
     margin: 0 auto;
     padding: 8px 0;
     height: 5rem;
@@ -69,7 +105,7 @@ header > .main_header {
 header > .main_header > .logo {
     font-size: 30px;
     font-weight: bold;
-    color: rgb(37, 37, 37);
+    color: var(--color-black);
     cursor: pointer;
 }
 
@@ -87,32 +123,33 @@ header > .main_header > .gnb > ul {
 header > .main_header > .gnb > ul > li > a {
     display: block;
     padding: 40px;
-    color: gray;
-    font-size: 14px;
-    font-weight: bold;
+    color: var(--color-gray);
+        font-size: var(--font-size-medium);
+
+    font-weight: 500;
     transition: color .3s;
 }
 
 header > .main_header > .gnb > ul > li > a:hover {
-    color: rgb(37, 37, 37);
+    color: var(--color-darkgray);
 }
 
 header > .main_header > .holder {
     display: flex;
     align-items: center;
     margin-left: 1.5rem;
-    color: gray;
+    color: var(--color-gray);
     gap: 20px;
 }
 
 header > .main_header > .holder > .icon {
-    color: rgb(37, 37, 37);
+    color: var(--color-black);
     cursor: pointer;
     transition: color .3s;
 }
 
 header > .main_header > .holder > .icon:hover {
-    color: gray;
+    color: var(--color-gray);
 }
 
 header > .main_header > .holder > .icon_cart {
@@ -123,17 +160,19 @@ header > .main_header > .holder > .icon_cart > .circle {
     position: absolute;
     top: -5px;
     left: 15px;
-    background-color: rgb(37, 37, 37);
+    background-color: var(--color-black);
     width: 14px;
     height: 14px;
     border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: var(--color-white);
     font-size: 12px;
 }
+/* 헤더 끝 */
 
+/* sec01 시작 */
 .hero_banner {
     height: 85vh;
     background-color: #ecebe6;
@@ -145,42 +184,50 @@ header > .main_header > .holder > .icon_cart > .circle {
     overflow: hidden;
 }
 
-.hero_banner > .bg {
-    position: absolute;
-
-}
 
 .hero_banner > .txt_box {
     z-index: 10;
     text-align: center;
+    gap: 22px;
 }
 
 .hero_banner > .txt_box > p {
-    font-size: 10px;
-    color: ;
+    font-size: var(--font-size-small);
+    color: var(--color-gray);
+    text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
 .hero_banner > .txt_box > h2 {
-    font-size: ;
-    color: ;
-    margin-bottom: ;
+    font-size: 72px;
+    color: var(--color-black);
+    margin: 0 0 24px 0;
 }
 
 .hero_banner > .txt_box > button {
-    border: 1px solid gray;
-    padding: 12px 12px;
-    font-size: 10px;
-    font-weight: bold;
+    border: 1px solid var(--color-black);
+    background-color: transparent;
+    padding: 16px 48px;
+    font-size: var(--font-size-small);
+    line-height: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     cursor: pointer;
     transition: all .3s;
 }
 
 .hero_banner > .txt_box > button:hover {
-    background-color: black;
+    background-color: var(--color-black);
     color: white;
 }
 
 .hero_banner > .arr {
     position: absolute;
-    bottom: 100px;
+    bottom: 40px;
+    width: 15px;
+    height: 18px;
+    color: var(--color-gray);
 }
+
+/* sec01 끝 */
