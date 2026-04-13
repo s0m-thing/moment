@@ -50,7 +50,7 @@ a {
     --color-black: #111111;
     --color-white: #fff;
     --color-beige: #faf9f6;
-    --border-gray: #ebebeb;
+    --border-gray: #e5e7eb;
     --font-size-small: 10px;
     --font-size-medium: 14px;
     --font-size-large: 30px;
@@ -255,7 +255,7 @@ header > .main_header > .holder > .icon_cart > .circle {
     position: sticky;
     top: 110px;
     z-index: 40;
-    box-shadow: ;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 }
 
 .anchor_nav > .con {
@@ -301,10 +301,14 @@ header > .main_header > .holder > .icon_cart > .circle {
     justify-content: space-between;
 }
 
+#travel-objects h3 {
+    font-size: var(--font-size-large);
+}
+
 #travel-objects .line {
     width: calc(100% /3);
     height: 1px;
-    background-color: var(--color-gray);
+    background-color: var(--border-gray);
 }
 
 /* sec02 시작 */
