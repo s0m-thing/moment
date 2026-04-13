@@ -170,6 +170,7 @@ header > .main_header > .holder > .icon_cart > .circle {
     color: var(--color-white);
     font-size: 12px;
 }
+
 /* 헤더 끝 */
 
 /* sec01 시작 */
@@ -228,6 +229,20 @@ header > .main_header > .holder > .icon_cart > .circle {
     width: 15px;
     height: 18px;
     color: var(--color-gray);
+    animation: bounce 1s infinite;
+
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-25%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+
+    50% {
+        transform: none;
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
 }
 
 /* sec01 끝 */
