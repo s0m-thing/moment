@@ -39,6 +39,10 @@ a {
     width: 100%;
 }
 
+.con {
+    max-width: 1440px;
+}
+
 /* 변수 */
 :root {
     --color-darkgray: #6B7280;
@@ -50,7 +54,6 @@ a {
     --font-size-small: 10px;
     --font-size-medium: 14px;
     --font-size-large: 30px;
-    --max-width: 1440px;
 }
 
 h2 {
@@ -69,7 +72,6 @@ header {
 }
 
 header > .utility_bar {
-    max-width: var(--max-width);
     margin: 0 auto;
     padding: 8px 2px;
     display: flex;
@@ -94,7 +96,6 @@ header > .utility_bar .menu_1:hover {
 }
 
 header > .main_header {
-    max-width: var(--max-width);
     margin: 0 auto;
     padding: 8px 0;
     height: 5rem;
@@ -124,8 +125,7 @@ header > .main_header > .gnb > ul > li > a {
     display: block;
     padding: 40px;
     color: var(--color-gray);
-        font-size: var(--font-size-medium);
-
+    font-size: var(--font-size-medium);
     font-weight: 500;
     transition: color .3s;
 }
@@ -244,5 +244,68 @@ header > .main_header > .holder > .icon_cart > .circle {
         animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     }
 }
-
 /* sec01 끝 */
+
+/* 앵커 네비게이션 섹션 시작*/
+.anchor_nav {
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--border-gray);
+    margin: 0 auto;
+    padding: 32px 0;
+    position: sticky;
+    top: 110px;
+    z-index: 40;
+    box-shadow: ;
+}
+
+.anchor_nav > .con {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    space: ;
+    gap: 50px;
+}
+
+.anchor_nav a {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.anchor_nav a > .anchor_line {
+    width: 40px;
+    height: 1px;
+    background-color: var(--color-gray);
+    margin-right: 12px;
+}
+
+.anchor_nav a > .anchor_name {
+    color: var(--color-gray);
+    font-weight: 700;
+    transition: color .3s;
+}
+
+.anchor_nav a:hover > .anchor_name {
+    color: var(--color-darkgray);
+}
+/* 앵커 네비게이션 섹션 끝*/
+/* 타이틀텍스트 1 시작 */
+#travel-objects {
+    margin: 0 auto;
+    padding: 32px 8px 16px 8px;
+}
+
+#travel-objects > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#travel-objects .line {
+    width: calc(100% /3);
+    height: 1px;
+    background-color: var(--color-gray);
+}
+
+/* sec02 시작 */
+/* sec02 끝 */
