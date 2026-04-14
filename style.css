@@ -41,6 +41,19 @@ a {
 
 .con {
     max-width: 1440px;
+    margin: 0 auto;
+}
+
+.img-placeholder { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: #f5f4f0; 
+    color: #9ca3af; 
+    font-size: 13px; 
+    text-align: center; 
+    border: none;
+    padding: 20px;
 }
 
 /* 변수 */
@@ -52,6 +65,7 @@ a {
     --color-beige: #faf9f6;
     --border-gray: #e5e7eb;
     --font-size-small: 10px;
+    --font-size-ms: 12px;
     --font-size-medium: 14px;
     --font-size-large: 30px;
 }
@@ -72,7 +86,6 @@ header {
 }
 
 header > .utility_bar {
-    margin: 0 auto;
     padding: 8px 2px;
     display: flex;
     justify-content: space-between;
@@ -259,7 +272,6 @@ header > .main_header > .holder > .icon_cart > .circle {
 }
 
 .anchor_nav > .con {
-    margin: 0 auto;
     display: flex;
     justify-content: center;
     space: ;
@@ -293,6 +305,7 @@ header > .main_header > .holder > .icon_cart > .circle {
 #travel-objects {
     margin: 0 auto;
     padding: 32px 8px 16px 8px;
+    scroll-margin-top: 160px;
 }
 
 #travel-objects > div {
@@ -312,6 +325,113 @@ header > .main_header > .holder > .icon_cart > .circle {
 }
 
 /* sec02-New Arrivals 시작 */
+.sec_new {
+    padding: 2rem 6rem;
+}
+
+.sec_new > div {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.sec_new div > h3 {
+    font-size: var(--font-size-large);
+    font-weight: 400;
+    color: var(--color-black);
+    margin-bottom: 12px;
+}
+
+.sec_new div > p {
+    font-size: var(--font-size-medium);
+    color: var(--color-gray);
+}
+
+.sec_new > div > button {
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color-gray);
+    padding-bottom: 8px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.sec_new > div > button:hover {
+    color: var(--color-darkgray);
+}
+
+.sec_new > .new_list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 32px;
+}
+
+.sec_new .new_item {
+    cursor: pointer;
+}
+
+.sec_new .new_item > .img-box {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    margin-bottom: 24px;
+}
+
+.sec_new .new_item > .img-box > .new {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-size: var(--font-size-small);
+    padding: 4px 8px;
+    text-transform: uppercase;
+}   
+
+.sec_new .new_item > .img-box > button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: transparent;
+    border: none;
+    color: var(--color-gray);
+    font-size: 18px;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.sec_new .new_item:hover > .img-box > button {
+    opacity: 1;
+}
+
+.sec_new .txt_box {
+    text-align: center;
+}
+
+.sec_new .txt_box > p:first-child {
+    font-size: var(--font-size-small);
+    color: var(--color-gray);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 4px;
+}
+
+.sec_new .txt_box > p:nth-child(2) {
+    font-size: var(--font-size-medium);
+    color: var(--color-black);
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.sec_new .txt_box > p:last-child {
+    font-size: var(--font-size-small);
+    color: var(--color-gray);
+}
 
 
 /* sec02 끝 */
+
