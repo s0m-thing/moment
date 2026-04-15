@@ -64,14 +64,33 @@ a {
     --color-white: #fff;
     --color-beige: #faf9f6;
     --border-gray: #e5e7eb;
+    --font-size-xs: 9px;
     --font-size-small: 10px;
     --font-size-ms: 12px;
     --font-size-medium: 14px;
     --font-size-large: 30px;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+}
+
+/* 토큰 맞는지 확인 */
+.add_to_cart {
+    font-size: var(--font-size-xs);
+    border: 1px solid var(--color-gray);
+    background-color: transparent;
+    padding: 8px 20px;
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.add_to_cart:hover {
+    border: 1px solid var(--color-black);
 }
 
 h2 {
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
 }
 
 /* 헤더 시작 */
