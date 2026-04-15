@@ -117,7 +117,7 @@ header > .main_header {
 }
 
 header > .main_header > .logo {
-    font-size: 30px;
+    font-size: var(--font-size-large);
     font-weight: bold;
     color: var(--color-black);
     cursor: pointer;
@@ -181,7 +181,7 @@ header > .main_header > .holder > .icon_cart > .circle {
     justify-content: center;
     align-items: center;
     color: var(--color-white);
-    font-size: 12px;
+    font-size: var(--font-size-ms);
 }
 
 /* 헤더 끝 */
@@ -402,10 +402,15 @@ header > .main_header > .holder > .icon_cart > .circle {
     font-size: 18px;
     opacity: 0;
     transition: all .3s;
+    cursor: pointer;
 }
 
 .sec_new .new_item:hover > .img-box > button {
     opacity: 1;
+}
+
+.sec_new .new_item > .img-box > button:hover {
+    color: red;
 }
 
 .sec_new .txt_box {
