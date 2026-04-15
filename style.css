@@ -301,6 +301,7 @@ header > .main_header > .holder > .icon_cart > .circle {
     color: var(--color-darkgray);
 }
 /* 앵커 네비게이션 섹션 끝*/
+
 /* 타이틀텍스트 1 시작 */
 #travel-objects {
     margin: 0 auto;
@@ -413,11 +414,11 @@ header > .main_header > .holder > .icon_cart > .circle {
     color: red;
 }
 
-.sec_new .txt_box {
+.sec_new .txt-box {
     text-align: center;
 }
 
-.sec_new .txt_box > p:first-child {
+.sec_new .txt-box > p:first-child {
     font-size: var(--font-size-small);
     color: var(--color-gray);
     text-transform: uppercase;
@@ -425,18 +426,166 @@ header > .main_header > .holder > .icon_cart > .circle {
     margin-bottom: 4px;
 }
 
-.sec_new .txt_box > p:nth-child(2) {
+.sec_new .txt-box > p:nth-child(2) {
     font-size: var(--font-size-medium);
     color: var(--color-black);
     font-weight: 500;
     margin-bottom: 4px;
 }
 
-.sec_new .txt_box > p:last-child {
+.sec_new .txt-box > p:last-child {
     font-size: var(--font-size-small);
     color: var(--color-gray);
 }
+/* sec02-New Arrivals 끝 */
 
+/* sec03-Signature Best 시작 */
+.sec_best {
+    padding: 2rem 6rem;
+    border-top: 1px solid var(--color-gray);
+}
 
-/* sec02 끝 */
+.sec_best > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+}
 
+.sec_best div > h3 {
+    font-size: var(--font-size-large);
+    font-weight: 400;
+    color: var(--color-black);
+    margin-bottom: 12px;
+}
+
+.sec_best div > p {
+    font-size: var(--font-size-medium);
+    color: var(--color-gray);
+}
+
+.sec_best > div > button {
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color-gray);
+    padding-bottom: 8px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.sec_best > div > button:hover {
+    color: var(--color-darkgray);
+}
+
+.sec_best > .best_list {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+/* best 1등 제품 */
+.sec_best > .best_list > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    cursor: pointer;
+}
+
+.sec_best > .best_list > div > .img-box {
+    width: 60%;
+    aspect-ratio: 16 / 10;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    background-color: var(--color-white);
+    border: 1px solid var(--border-gray);
+    overflow: hidden;
+    position: relative;
+}
+
+.sec_best > .best_list > div > .img-box > div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: var(--border-gray);
+
+}
+
+.sec_best > .best_list > div > .img-box > button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: transparent;
+    border: none;
+    color: var(--color-gray);
+    font-size: 18px;
+    opacity: 0;
+    z-index: 20;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.sec_best > .best_list > div:hover > .img-box > button {
+    opacity: 1;
+}
+
+.sec_best > .best_list > div > .img-box > button:hover {
+    color: red;
+}
+
+.sec_best > .best_list > div > .txt-box {
+    width: 40%;
+    padding-right: 3rem;
+}
+
+.sec_best > .best_list > div > .txt-box > .category {
+    font-size: var(--font-size-small);
+    color: var(--color-gray);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.sec_best > .best_list > div > .txt-box > .name {
+    font-size: 36px;
+    color: var(--color-darkgray);
+    margin: 0 0 24px 0;
+    font-weight: 500;
+}
+
+.sec_best > .best_list > div > .txt-box > .des {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: var(--color-gray);
+    margin-bottom: 40px;
+}
+
+.sec_best > .best_list > div > .txt-box > .price {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-gray);
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-gray);
+}
+
+.sec_best > .best_list > div > .txt-box > .price > .price-txt {
+    font-size: ;
+    color: ;
+    font-weight: 600;
+}
+
+.sec_best > .best_list > div > .txt-box > .price > .price-explore {
+    font-size: ;
+    text-transform: uppercase;
+    color: var(--color-gray);
+    transition: all .3s;
+}
+
+.sec_best > .best_list > div > .txt-box > .price > .price-explore:hover {
+    color: var(--color-darkgray);
+}
+
+/* sec03-Signature Best 끝 */
