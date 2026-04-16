@@ -61,6 +61,14 @@ a {
     --font-weight-medium: 500;
     --font-weight-bold: 700;
 
+    /* 간격 */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 12px;
+    --spacing-lg: 16px;
+    --spacing-xl: 20px;
+    --spacing-2xl: 30px;
+
     /* ===========의미토큰=================== */
     /* ADD TO CART 버튼 */
     --button-color-border-default: var(--color-gray);
@@ -68,11 +76,30 @@ a {
     --button-bg-transparent: var(--color-transparent);
     --button-fs: var(--font-size-xs);
     --button-fw: var(--font-weight-bold);
+
+    /* img-box 토큰 */
+    --img-box-bg: var(--color-lightgray);
+    --img-boxcolor: var(--color-gray);
+    --img-box-fs: var(--font-size-medium);
+
+    /* pro-text-box */
+    --pro-category-color: var(--color-gray);
+    --pro-category-fs: var(--font-size-small);
+
+    --pro-title-color: var(--color-black);
+    --pro-title-fs: var(--font-size-medium);
+    --pro-title-fw: var(--font-weight-medium);
+
+    --pro-price-color: var(--color-gray);
+    --pro-price-fs: var(--font-size-small);
+
+    --pro-gap-size: var(--spacing-xs);
+    
 }
 
 
+/* 토큰 라이브러리 */
 
-/* 토큰 맞는지 확인 */
 .add_to_cart {
     font-size: var(--button-fs);
     border: 1px solid var(--button-color-border-default);
@@ -85,6 +112,45 @@ a {
 
 .add_to_cart:hover {
     border: 1px solid var(--button-color-border-hover);
+}
+
+.img-box{ 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: var(--img-box-bg); 
+    color: var(--img-boxcolor); 
+    font-size: var(--img-box-fs); 
+    text-align: center; 
+    border: none;
+    padding: 20px;
+    position: absolute;
+}
+
+.pro-text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--pro-gap-size);
+}
+
+.pro-text-box .category {
+    color: var(--pro-category-color);
+    font-size: var(--pro-category-fs);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.pro-text-box .title {
+    color: var(--pro-title-color);
+    font-size: var(--pro-title-fs);
+    font-weight: var(--pro-title-fw);
+    margin: 0;
+}
+
+.pro-text-box .price {
+    color: var(--pro-price-color);
+    font-size: var(--pro-price-fs);
 }
 
 
@@ -104,19 +170,7 @@ h2 {
     margin: 0 auto;
 }
 
-.img-placeholder { 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    background-color: #f5f4f0; 
-    color: #9ca3af; 
-    font-size: 13px; 
-    text-align: center; 
-    border: none;
-    padding: 20px;
-    position: absolute;
 
-}
 
 
 
@@ -374,6 +428,7 @@ header > .main_header > .holder > .icon_cart > .circle {
     height: 1px;
     background-color: var(--border-gray);
 }
+/* 타이틀텍스트 1 끝 */
 
 /* sec02-New Arrivals 시작 */
 .sec_new {
@@ -548,7 +603,7 @@ header > .main_header > .holder > .icon_cart > .circle {
     width: 60%;
     aspect-ratio: 16 / 10;
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    background-color: var(--color-white);
+    background-color: var(--color-lightgray);
     border: 1px solid var(--border-gray);
     overflow: hidden;
     position: relative;
@@ -598,7 +653,7 @@ header > .main_header > .holder > .icon_cart > .circle {
     margin-bottom: 16px;
 }
 
-.sec_best > .best_list > div > .txt-box > .name {
+.sec_best > .best_list > div > .txt-box > .title {
     font-size: 36px;
     color: var(--color-darkgray);
     margin: 0 0 24px 0;
@@ -638,9 +693,10 @@ header > .main_header > .holder > .icon_cart > .circle {
     color: var(--color-darkgray);
 }
 
+/* best 2,3,4등 제품 */
 .sec_best .best-list-2 {
     display: flex;
-    flex: 1;
+    gap: 2rem;
     margin-top: 16px;
 }
 
@@ -650,18 +706,11 @@ header > .main_header > .holder > .icon_cart > .circle {
 }
 
 .sec_best .best-list-2 > .best-item > .img-box {
+    position: relative;
     aspect-ratio: 3 / 4;
     overflow: hidden;
-    background-color: var(--color-white);
-    border: 1px solid var(--border-gray);
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     margin-bottom: 24px;
-    position: relative;
-}
-
-.sec_best .best-list-2 > .best-item > .img-box > .img-placeholder {
-    width: 100%;
-    height: 100%;
 }
 
 
