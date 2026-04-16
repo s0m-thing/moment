@@ -34,47 +34,35 @@ a {
 	text-decoration: none;
 }
 
-/* 라이브러리 */
-.w-100 {
-    width: 100%;
-}
 
-.con {
-    max-width: 1440px;
-    margin: 0 auto;
-}
 
-.img-placeholder { 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    background-color: #f5f4f0; 
-    color: #9ca3af; 
-    font-size: 13px; 
-    text-align: center; 
-    border: none;
-    padding: 20px;
-}
 
-/* 기본 토큰 (원시 값 자체 정의) */
 :root {
+    
+    /* ==========기본 변수 (원시 값 자체 정의)========== */
+    /* 색상 */
     --color-darkgray: #6B7280;
     --color-gray: #9CA3AF;
+    --color-lightgray: #e5e7eb;
     --color-black: #111111;
     --color-white: #fff;
     --color-beige: #faf9f6;
-    --border-gray: #e5e7eb;
     --color-transparent: transparent;
+
+    /* 폰트 사이즈 */
     --font-size-xs: 9px;
     --font-size-small: 10px;
     --font-size-ms: 12px;
     --font-size-medium: 14px;
     --font-size-large: 30px;
+
+    /* 폰트 두께 */
     --font-weight-regular: 400;
     --font-weight-medium: 500;
     --font-weight-bold: 700;
 
-    /* 의미토큰 */
+    /* ===========의미토큰=================== */
+    /* ADD TO CART 버튼 */
     --button-color-border-default: var(--color-gray);
     --button-color-border-hover: var(--color-black);
     --button-bg-transparent: var(--color-transparent);
@@ -104,6 +92,37 @@ a {
 h2 {
     font-weight: var(--font-weight-regular);
 }
+
+
+/* 라이브러리 */
+.w-100 {
+    width: 100%;
+}
+
+.con {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.img-placeholder { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: #f5f4f0; 
+    color: #9ca3af; 
+    font-size: 13px; 
+    text-align: center; 
+    border: none;
+    padding: 20px;
+    position: absolute;
+
+}
+
+
+
+
+/* 라이브러리 끝 */
+
 
 /* 헤더 시작 */
 header {
@@ -396,12 +415,12 @@ header > .main_header > .holder > .icon_cart > .circle {
 }
 
 .sec_new > .new_list {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 32px;
+    display: flex;
+    gap: 2rem;
 }
 
 .sec_new .new_item {
+    flex: 1;
     cursor: pointer;
 }
 
@@ -618,5 +637,64 @@ header > .main_header > .holder > .icon_cart > .circle {
 .sec_best > .best_list > div > .txt-box > .price > .price-explore:hover {
     color: var(--color-darkgray);
 }
+
+.sec_best .best-list-2 {
+    display: flex;
+    flex: 1;
+    margin-top: 16px;
+}
+
+.sec_best .best-list-2 > .best-item {
+    flex: 1;
+    cursor: pointer;
+}
+
+.sec_best .best-list-2 > .best-item > .img-box {
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background-color: var(--color-white);
+    border: 1px solid var(--border-gray);
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.sec_best .best-list-2 > .best-item > .img-box > .img-placeholder {
+    width: 100%;
+    height: 100%;
+}
+
+
+.sec_best .best-list-2 > .best-item > .img-box > .wishlist {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: transparent;
+    border: none;
+    color: var(--color-gray);
+    font-size: 18px;
+    opacity: 0;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.sec_best .best-list-2 > .best-item:hover > .img-box > .wishlist {
+    opacity: 1;
+}
+
+.sec_best .best-list-2 > .best-item > .img-box > .wishlist:hover {
+    color: red;
+}
+
+.sec_best .best-list-2 > .best-item > .txt-box {
+    text-align: center;
+}
+
+.sec_best .best-list-2 > .best-item > .txt-box > p:first-child {
+    
+}
+
+
+
 
 /* sec03-Signature Best 끝 */
