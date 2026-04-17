@@ -22,7 +22,7 @@
 
 
 /* 노말라이즈 */
-body, ul, li {
+body, ul, li, p, h1, h2, h3, h4 {
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -39,7 +39,7 @@ a {
 
 :root {
     
-    /* ==========기본 변수 (원시 값 자체 정의)========== */
+    /* ==========기본 토큰(원시 값 자체 정의)========== */
     /* 색상 */
     --color-darkgray: #6B7280;
     --color-gray: #9CA3AF;
@@ -69,7 +69,7 @@ a {
     --spacing-xl: 20px;
     --spacing-2xl: 30px;
 
-    /* ===========의미토큰=================== */
+    /* ===============의미토큰=================== */
     /* ADD TO CART 버튼 */
     --button-color-border-default: var(--color-gray);
     --button-color-border-hover: var(--color-black);
@@ -79,6 +79,7 @@ a {
 
     /* img-box 토큰 */
     --img-box-bg: var(--color-lightgray);
+    --img-box-bg-hover: var(--color-gray);
     --img-boxcolor: var(--color-gray);
     --img-box-fs: var(--font-size-medium);
 
@@ -132,13 +133,14 @@ a {
     flex-direction: column;
     align-items: center;
     gap: var(--pro-gap-size);
+    text-align: center;
 }
 
 .pro-text-box .category {
     color: var(--pro-category-color);
     font-size: var(--pro-category-fs);
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
 }
 
 .pro-text-box .title {
@@ -370,7 +372,7 @@ header > .main_header > .holder > .icon_cart > .circle {
     margin: 0 auto;
     padding: 24px 0;
     position: sticky;
-    top: 110px;
+    top: 124px;
     z-index: 40;
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 }
@@ -432,14 +434,14 @@ header > .main_header > .holder > .icon_cart > .circle {
 
 /* sec02-New Arrivals 시작 */
 .sec_new {
-    padding: 2rem 6rem;
+    padding: 6rem 2rem;
 }
 
 .sec_new > div {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .sec_new div > h3 {
@@ -546,7 +548,7 @@ header > .main_header > .holder > .icon_cart > .circle {
 
 /* sec03-Signature Best 시작 */
 .sec_best {
-    padding: 2rem 6rem;
+    padding: 8rem 2rem;
     border-top: 1px solid var(--color-gray);
 }
 
@@ -554,7 +556,7 @@ header > .main_header > .holder > .icon_cart > .circle {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .sec_best div > h3 {
