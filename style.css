@@ -55,6 +55,7 @@ a {
     --font-size-ms: 12px;
     --font-size-medium: 14px;
     --font-size-large: 30px;
+    --font-size-72: 72px;
 
     /* 폰트 두께 */
     --font-weight-regular: 400;
@@ -70,6 +71,58 @@ a {
     --spacing-2xl: 30px;
 
     /* ===============의미토큰=================== */
+
+    /* header 토큰 */
+    --header-bg: var(--color-beige);
+
+    /* main header 토큰 */
+    /* header icon */
+    --header-logo-fs: var(--font-size-large);
+    --header-logo-fw: var(--font-weight-bold);
+    --header-logo-color: var(--color-black);
+
+    /* header menu */
+    --header-menu-fs: var(--font-size-medium);
+    --header-menu-fw: var(--font-weight-medium);
+    --header-menu-color: var(--color-gray);
+    --header-menu-color-hover: var(--color-darkgray);
+
+    /* header icon */
+    --header-icon-color: var(--color-black);
+    --header-icon-color-hover: var(--color-gray);
+    --header-icon-txt-color: var(--color-white);
+    --header-icon-fs: var(--font-size-ms);
+
+    /* utility bar 토큰 */
+    --utility-bar-color: var(--color-gray);
+    --utility-bar-color-hover: var(--color-darkgray);
+    --utility-bar-fs: var(--font-size-small);
+    --utility-bar-border-color: var(--color-lightgray);
+
+    /* hero banner 토큰 */
+    --hero-p-fs: var(--font-size-small);
+    --hero-h2-fs: var(--font-size-72);
+    --hero-p-color: var(--color-gray);
+    --hero-h2-color: var(--color-black);
+    --hero-btn-border-color: var(--color-black);
+    --hero-btn-color: var(--color-black);
+    --hero-btn-color-hover: var(--color-white);
+    --hero-btn-fs: var(--font-size-small);
+    --hero-btn-bg-transparent: var(--button-bg-transparent);
+    --hero-btn-bg-hover: var(--color-black);
+    --hero-arr-color: var(--color-gray);
+
+    /* anchor nav 토큰 */
+    --anchor-bg: var(--color-white);
+    --anchor-border-color: var(--color-lightgray);
+    --anchor-fw: var(--font-weight-bold);
+    --anchor-line-bg: var(--color-gray);
+    --anchor-line-bg-hover: var(--color-darkgray);
+    --anchor-name-color: var(--color-gray);
+    --anchor-name-color-hover: var(--color-darkgray);
+    --anchor-name-fw: var(--font-weight-bold);
+
+
     /* ADD TO CART 버튼 */
     --button-color-border-default: var(--color-gray);
     --button-color-border-hover: var(--color-black);
@@ -182,9 +235,7 @@ h2 {
 
 /* 헤더 시작 */
 header {
-    background-color: var(--color-beige);
-    box-sizing: border-box;
-    border-bottom: 1px solid var(--border-gray);
+    background-color: var(--header-bg);
     position: sticky;
     top: 0;
     left: 0;
@@ -195,10 +246,10 @@ header > .utility_bar {
     padding: 8px 2px;
     display: flex;
     justify-content: space-between;
-    font-size: var(--font-size-small);
-    color: var(--color-gray);
+    font-size: var(--utility-bar-fs);
+    color: var(--utility-bar-color);
     box-sizing: border-box;
-    border-bottom: 1px solid var(--border-gray);
+    border-bottom: 1px solid var(--utility-bar-border-color);
 }
 
 header > .utility_bar .menu_1 {
@@ -211,7 +262,7 @@ header > .utility_bar .menu_1:last-child {
 }
 
 header > .utility_bar .menu_1:hover {
-    color: var(--color-darkgray);
+    color: var(--utility-bar-color-hover);
 }
 
 header > .main_header {
@@ -223,9 +274,9 @@ header > .main_header {
 }
 
 header > .main_header > .logo {
-    font-size: var(--font-size-large);
-    font-weight: bold;
-    color: var(--color-black);
+    font-size: var(--header-logo-fs);
+    font-weight: var(--header-logo-fw);
+    color: var(--header-logo-color);
     cursor: pointer;
 }
 
@@ -243,32 +294,31 @@ header > .main_header > .gnb > ul {
 header > .main_header > .gnb > ul > li > a {
     display: block;
     padding: 40px;
-    color: var(--color-gray);
-    font-size: var(--font-size-medium);
-    font-weight: 500;
+    color: var(--header-menu-color);
+    font-size: var(--header-menu-fs);
+    font-weight: var(--header-menu-fw);
     transition: color .3s;
 }
 
 header > .main_header > .gnb > ul > li > a:hover {
-    color: var(--color-darkgray);
+    color: var(--header-menu-color-hover);
 }
 
 header > .main_header > .holder {
     display: flex;
     align-items: center;
     margin-left: 1.5rem;
-    color: var(--color-gray);
     gap: 20px;
 }
 
 header > .main_header > .holder > .icon {
-    color: var(--color-black);
+    color: var(--header-icon-color);
     cursor: pointer;
     transition: color .3s;
 }
 
 header > .main_header > .holder > .icon:hover {
-    color: var(--color-gray);
+    color: var(--header-icon-color-hover);
 }
 
 header > .main_header > .holder > .icon_cart {
@@ -279,15 +329,20 @@ header > .main_header > .holder > .icon_cart > .circle {
     position: absolute;
     top: -5px;
     left: 15px;
-    background-color: var(--color-black);
+    background-color: var(--header-icon-color);
     width: 14px;
     height: 14px;
     border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--color-white);
-    font-size: var(--font-size-ms);
+    color: var(--header-icon-txt-color);
+    font-size: var(--header-icon-fs);
+    transition: all .3s;
+}
+
+header > .main_header > .holder > .icon_cart:hover > .circle {
+    background-color: var(--header-icon-color-hover);
 }
 
 /* 헤더 끝 */
@@ -312,25 +367,24 @@ header > .main_header > .holder > .icon_cart > .circle {
 }
 
 .hero_banner > .txt_box > p {
-    font-size: var(--font-size-small);
-    color: var(--color-gray);
+    font-size: var(--hero-p-fs);
+    color: var(--hero-p-color);
     text-transform: uppercase;
     letter-spacing: 4px;
 }
 
 .hero_banner > .txt_box > h2 {
-    font-size: 72px;
-    color: var(--color-black);
+    font-size: var(--hero-h2-fs);
+    color: var(--hero-h2-color);
     margin: 0 0 24px 0;
 }
 
 .hero_banner > .txt_box > button {
-    border: 1px solid var(--color-black);
-    background-color: transparent;
+    border: 1px solid var(--hero-btn-border-color);
+    background-color: var(--hero-btn-bg-transparent);
     padding: 16px 48px;
-    font-size: var(--font-size-small);
+    font-size: var(--hero-btn-fs);
     line-height: 15px;
-    font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
     cursor: pointer;
@@ -338,8 +392,8 @@ header > .main_header > .holder > .icon_cart > .circle {
 }
 
 .hero_banner > .txt_box > button:hover {
-    background-color: var(--color-black);
-    color: white;
+    background-color: var(--hero-btn-bg-hover);
+    color: var(--hero-btn-color-hover);
 }
 
 .hero_banner > .arr {
@@ -347,7 +401,7 @@ header > .main_header > .holder > .icon_cart > .circle {
     bottom: 40px;
     width: 15px;
     height: 18px;
-    color: var(--color-gray);
+    color: var(--hero-arr-color);
     animation: bounce 1s infinite;
 
 }
@@ -367,8 +421,8 @@ header > .main_header > .holder > .icon_cart > .circle {
 
 /* 앵커 네비게이션 섹션 시작*/
 .anchor_nav {
-    background-color: var(--color-white);
-    border-bottom: 1px solid var(--border-gray);
+    background-color: var(--anchor-bg);
+    border-bottom: 1px solid var(--anchor-border-color);
     margin: 0 auto;
     padding: 24px 0;
     position: sticky;
@@ -380,7 +434,6 @@ header > .main_header > .holder > .icon_cart > .circle {
 .anchor_nav > .con {
     display: flex;
     justify-content: center;
-    space: ;
     gap: 50px;
 }
 
@@ -393,18 +446,23 @@ header > .main_header > .holder > .icon_cart > .circle {
 .anchor_nav a > .anchor_line {
     width: 40px;
     height: 1px;
-    background-color: var(--color-gray);
+    background-color: var(--anchor-line-bg);
     margin-right: 12px;
+    transition: all .3s;
+}
+
+.anchor_nav a:hover > .anchor_line {
+    background-color: var(--anchor-line-bg-hover);
 }
 
 .anchor_nav a > .anchor_name {
-    color: var(--color-gray);
-    font-weight: 700;
+    color: var(--anchor-name-color);
+    font-weight: var(--anchor-name-fw);
     transition: color .3s;
 }
 
 .anchor_nav a:hover > .anchor_name {
-    color: var(--color-darkgray);
+    color: var(--anchor-name-color-hover);
 }
 /* 앵커 네비게이션 섹션 끝*/
 
