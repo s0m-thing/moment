@@ -1,0 +1,7 @@
+:root {
+  --font-size-xs: 9px;
+}
+
+#add_to_cart {
+  font-size: var(--font-size-xs);
+}/*# sourceMappingURL=main.css.map */
