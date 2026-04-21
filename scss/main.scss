@@ -1,14 +1,5 @@
-// main.scss
-@use 'tokens' as t; // _tokens.scss 파일을 불러와서 't'라고 부르겠다!
+@use 'tokens';
 
-:root {
-  // 이제 't' 안에 있는 $font-sizes를 꺼내 쓸 수 있어요.
-  --font-size-xs: #{map-get(t.$font-sizes, xs)};
-}
-
-#add_to_cart {
-  font-size: var(--font-size-xs);
-}
 
 /* 폰트 불러오기 */
 @font-face {
@@ -749,13 +740,10 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
 }
 
 .sec_best > .best_list > div > .txt-box > .price > .price-txt {
-    font-size: ;
-    color: ;
     font-weight: 600;
 }
 
 .sec_best > .best_list > div > .txt-box > .price > .price-explore {
-    font-size: ;
     text-transform: uppercase;
     color: var(--color-gray);
     transition: all .3s;
@@ -811,9 +799,6 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
     text-align: center;
 }
 
-.sec_best .best-list-2 > .best-item > .txt-box > p:first-child {
-    
-}
 
 
 
