@@ -1,8 +1,50 @@
 $font-sizes: (
   xs: 9px,
-  small: 10px,
+  sm: 10px,
   ms: 12px,
-  medium: 14px,
-  large: 30px,
-  '72': 72px
+  md: 14px,
+  lg: 30px,
+  xl: 48px,
+  xxl: 72px
+);
+
+$font-weights: (
+  thin: 100,
+  extralight: 200,
+  light: 300,
+  normal: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  extrabold: 800,
+  black: 900
+);
+
+$line-heights: (
+  xs: 12px,
+  sm: 14px,
+  ms: 16px,
+  md: 18px,
+  lg: 36px,
+  xl: 48px,
+  xxl: 72px
+);
+
+$colors: (
+  darkgray: #6B7280,
+  gray: #9CA3AF,
+  lightgray: #e5e7eb,
+  black: #111111,
+  white: #fff,
+  beige: #faf9f6,
+  transparent: transparent
+);
+
+$spacing: (
+  xs: 4px,
+  sm: 8px,
+  ms: 12px,
+  md: 16px,
+  lg: 24px,
+  xl: 32px
 );
