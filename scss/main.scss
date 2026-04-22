@@ -1,4 +1,7 @@
-@use 'tokens';
+@use 'tokens' as t;
+
+
+
 
 
 /* 폰트 불러오기 */
@@ -11,7 +14,7 @@
 
 @font-face {
     font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-md.woff2') format('woff2');
     font-weight: 500;
     font-display: swap;
 }
@@ -48,13 +51,13 @@ a {
 
     /* main header 토큰 */
     /* header icon */
-    --header-logo-fs: var(--font-size-large);
+    --header-logo-fs: var(--font-size-lg);
     --header-logo-fw: var(--font-weight-bold);
     --header-logo-color: var(--color-black);
 
     /* header menu */
-    --header-menu-fs: var(--font-size-medium);
-    --header-menu-fw: var(--font-weight-medium);
+    --header-menu-fs: var(--font-size-md);
+    --header-menu-fw: var(--font-weight-md);
     --header-menu-color: var(--color-gray);
     --header-menu-color-hover: var(--color-darkgray);
 
@@ -72,7 +75,7 @@ a {
 
     /* hero banner 토큰 */
     --hero-p-fs: var(--font-size-small);
-    --hero-h2-fs: var(--font-size-72);
+    --hero-h2-fs: var(--font-size-xxl);
     --hero-p-color: var(--color-gray);
     --hero-h2-color: var(--color-black);
     --hero-btn-border-color: var(--color-black);
@@ -105,15 +108,15 @@ a {
     --img-box-bg: var(--color-lightgray);
     --img-box-bg-hover: var(--color-gray);
     --img-boxcolor: var(--color-gray);
-    --img-box-fs: var(--font-size-medium);
+    --img-box-fs: var(--font-size-md);
 
     /* pro-text-box */
     --pro-category-color: var(--color-gray);
     --pro-category-fs: var(--font-size-small);
 
     --pro-title-color: var(--color-black);
-    --pro-title-fs: var(--font-size-medium);
-    --pro-title-fw: var(--font-weight-medium);
+    --pro-title-fs: var(--font-size-md);
+    --pro-title-fw: var(--font-weight-md);
 
     --pro-price-color: var(--color-gray);
     --pro-price-fs: var(--font-size-small);
@@ -451,7 +454,7 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
 }
 
 #travel-objects h3 {
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-lg);
 }
 
 #travel-objects .line {
@@ -474,14 +477,14 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
 }
 
 .sec_new div > h3 {
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-lg);
     font-weight: 400;
     color: var(--color-black);
     margin-bottom: 12px;
 }
 
 .sec_new div > p {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-md);
     color: var(--color-gray);
 }
 
@@ -563,7 +566,7 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
 }
 
 .sec_new .txt-box > p:nth-child(2) {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-md);
     color: var(--color-black);
     font-weight: 500;
     margin-bottom: 4px;
@@ -589,14 +592,14 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
 }
 
 .sec_best div > h3 {
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-lg);
     font-weight: 400;
     color: var(--color-black);
     margin-bottom: 12px;
 }
 
 .sec_best div > p {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-md);
     color: var(--color-gray);
 }
 
