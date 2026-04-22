@@ -1,9 +1,6 @@
 @use 'tokens' as t;
 
 
-
-
-
 /* 폰트 불러오기 */
 @font-face {
     font-family: 'Pretendard';
@@ -41,15 +38,35 @@ a {
 }
 
 
-
-
 :root {
-    /* ===============의미토큰=================== */
+    // 의미토큰
+    // 폰트 사이즈 재료
+    --font-size-xs: #{map-get(t.$font-sizes, xs)};
+    --font-size-sm: #{map-get(t.$font-sizes, sm)};
+    --font-size-ms: #{map-get(t.$font-sizes, ms)};
+    --font-size-md: #{map-get(t.$font-sizes, md)};
+    --font-size-lg: #{map-get(t.$font-sizes, lg)};
+    --font-size-xxl: #{map-get(t.$font-sizes, xxl)};
 
+    // 폰트 두께 재료
+    --font-weight-normal: #{map-get(t.$font-weights, normal)};
+    --font-weight-medium: #{map-get(t.$font-weights, medium)};
+    --font-weight-bold: #{map-get(t.$font-weights, bold)};
+
+    // 색상 재료
+    --color-lightgray: #{map-get(t.$colors, lightgray)};
+    --color-gray: #{map-get(t.$colors, gray)};
+    --color-darkgray: #{map-get(t.$colors, darkgray)};
+    --color-black: #{map-get(t.$colors, black)};
+    --color-white: #{map-get(t.$colors, white)};
+    --color-beige: #{map-get(t.$colors, beige)};
+    --color-transparent: #{map-get(t.$colors, transparent)};
+
+
+    // 의미 토큰 정의
     /* header 토큰 */
     --header-bg: var(--color-beige);
 
-    /* main header 토큰 */
     /* header icon */
     --header-logo-fs: var(--font-size-lg);
     --header-logo-fw: var(--font-weight-bold);
@@ -57,7 +74,7 @@ a {
 
     /* header menu */
     --header-menu-fs: var(--font-size-md);
-    --header-menu-fw: var(--font-weight-md);
+    --header-menu-fw: var(--font-weight-medium);
     --header-menu-color: var(--color-gray);
     --header-menu-color-hover: var(--color-darkgray);
 
@@ -70,18 +87,18 @@ a {
     /* utility bar 토큰 */
     --utility-bar-color: var(--color-gray);
     --utility-bar-color-hover: var(--color-darkgray);
-    --utility-bar-fs: var(--font-size-small);
+    --utility-bar-fs: var(--font-size-sm);
     --utility-bar-border-color: var(--color-lightgray);
 
     /* hero banner 토큰 */
-    --hero-p-fs: var(--font-size-small);
+    --hero-p-fs: var(--font-size-sm);
     --hero-h2-fs: var(--font-size-xxl);
     --hero-p-color: var(--color-gray);
     --hero-h2-color: var(--color-black);
     --hero-btn-border-color: var(--color-black);
     --hero-btn-color: var(--color-black);
     --hero-btn-color-hover: var(--color-white);
-    --hero-btn-fs: var(--font-size-small);
+    --hero-btn-fs: var(--font-size-sm);
     --hero-btn-bg-transparent: var(--button-bg-transparent);
     --hero-btn-bg-hover: var(--color-black);
     --hero-arr-color: var(--color-gray);
@@ -112,14 +129,14 @@ a {
 
     /* pro-text-box */
     --pro-category-color: var(--color-gray);
-    --pro-category-fs: var(--font-size-small);
+    --pro-category-fs: var(--font-size-sm);
 
     --pro-title-color: var(--color-black);
     --pro-title-fs: var(--font-size-md);
-    --pro-title-fw: var(--font-weight-md);
+    --pro-title-fw: var(--font-weight-medium);
 
     --pro-price-color: var(--color-gray);
-    --pro-price-fs: var(--font-size-small);
+    --pro-price-fs: var(--font-size-sm);
 
     --pro-gap-size: var(--spacing-xs);
     
@@ -489,7 +506,7 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
 }
 
 .sec_new > div > button {
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-sm);
     font-weight: 600;
     background-color: transparent;
     border: none;
@@ -527,7 +544,7 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
     left: 12px;
     background-color: var(--color-white);
     color: var(--color-black);
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-sm);
     padding: 4px 8px;
     text-transform: uppercase;
 }   
@@ -558,7 +575,7 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
 }
 
 .sec_new .txt-box > p:first-child {
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-sm);
     color: var(--color-gray);
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -573,7 +590,7 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
 }
 
 .sec_new .txt-box > p:last-child {
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-sm);
     color: var(--color-gray);
 }
 /* sec02-New Arrivals 끝 */
@@ -604,7 +621,7 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
 }
 
 .sec_best > div > button {
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-sm);
     font-weight: 600;
     background-color: transparent;
     border: none;
@@ -681,7 +698,7 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
 }
 
 .sec_best > .best_list > div > .txt-box > .category {
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-sm);
     color: var(--color-gray);
     text-transform: uppercase;
     margin-bottom: 16px;
