@@ -8,7 +8,7 @@
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2") format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-md.woff2") format("woff2");
   font-weight: 500;
   font-display: swap;
 }
@@ -32,43 +32,31 @@ a {
 }
 
 :root {
-  /* ==========기본 토큰(원시 값 자체 정의)========== */
-  /* 색상 */
-  --color-darkgray: #6B7280;
-  --color-gray: #9CA3AF;
+  --font-size-xs: 9px;
+  --font-size-sm: 10px;
+  --font-size-ms: 12px;
+  --font-size-md: 14px;
+  --font-size-lg: 30px;
+  --font-size-xl: 48px;
+  --font-size-xxl: 72px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
   --color-lightgray: #e5e7eb;
+  --color-gray: #9CA3AF;
+  --color-darkgray: #6B7280;
   --color-black: #111111;
   --color-white: #fff;
   --color-beige: #faf9f6;
   --color-transparent: transparent;
-  /* 폰트 사이즈 */
-  --font-size-xs: 9px;
-  --font-size-small: 10px;
-  --font-size-ms: 12px;
-  --font-size-medium: 14px;
-  --font-size-large: 30px;
-  --font-size-72: 72px;
-  /* 폰트 두께 */
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-bold: 700;
-  /* 간격 */
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
-  --spacing-md: 12px;
-  --spacing-lg: 16px;
-  --spacing-xl: 20px;
-  --spacing-2xl: 30px;
-  /* ===============의미토큰=================== */
   /* header 토큰 */
   --header-bg: var(--color-beige);
-  /* main header 토큰 */
   /* header icon */
-  --header-logo-fs: var(--font-size-large);
+  --header-logo-fs: var(--font-size-lg);
   --header-logo-fw: var(--font-weight-bold);
   --header-logo-color: var(--color-black);
   /* header menu */
-  --header-menu-fs: var(--font-size-medium);
+  --header-menu-fs: var(--font-size-md);
   --header-menu-fw: var(--font-weight-medium);
   --header-menu-color: var(--color-gray);
   --header-menu-color-hover: var(--color-darkgray);
@@ -80,17 +68,17 @@ a {
   /* utility bar 토큰 */
   --utility-bar-color: var(--color-gray);
   --utility-bar-color-hover: var(--color-darkgray);
-  --utility-bar-fs: var(--font-size-small);
+  --utility-bar-fs: var(--font-size-sm);
   --utility-bar-border-color: var(--color-lightgray);
   /* hero banner 토큰 */
-  --hero-p-fs: var(--font-size-small);
-  --hero-h2-fs: var(--font-size-72);
+  --hero-p-fs: var(--font-size-sm);
+  --hero-h2-fs: var(--font-size-xxl);
   --hero-p-color: var(--color-gray);
   --hero-h2-color: var(--color-black);
   --hero-btn-border-color: var(--color-black);
   --hero-btn-color: var(--color-black);
   --hero-btn-color-hover: var(--color-white);
-  --hero-btn-fs: var(--font-size-small);
+  --hero-btn-fs: var(--font-size-sm);
   --hero-btn-bg-transparent: var(--button-bg-transparent);
   --hero-btn-bg-hover: var(--color-black);
   --hero-arr-color: var(--color-gray);
@@ -113,15 +101,15 @@ a {
   --img-box-bg: var(--color-lightgray);
   --img-box-bg-hover: var(--color-gray);
   --img-boxcolor: var(--color-gray);
-  --img-box-fs: var(--font-size-medium);
+  --img-box-fs: var(--font-size-md);
   /* pro-text-box */
   --pro-category-color: var(--color-gray);
-  --pro-category-fs: var(--font-size-small);
+  --pro-category-fs: var(--font-size-sm);
   --pro-title-color: var(--color-black);
-  --pro-title-fs: var(--font-size-medium);
+  --pro-title-fs: var(--font-size-md);
   --pro-title-fw: var(--font-weight-medium);
   --pro-price-color: var(--color-gray);
-  --pro-price-fs: var(--font-size-small);
+  --pro-price-fs: var(--font-size-sm);
   --pro-gap-size: var(--spacing-xs);
 }
 
@@ -437,7 +425,7 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
 }
 
 #travel-objects h3 {
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-lg);
 }
 
 #travel-objects .line {
@@ -460,19 +448,19 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
 }
 
 .sec_new div > h3 {
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-lg);
   font-weight: 400;
   color: var(--color-black);
   margin-bottom: 12px;
 }
 
 .sec_new div > p {
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-md);
   color: var(--color-gray);
 }
 
 .sec_new > div > button {
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-sm);
   font-weight: 600;
   background-color: transparent;
   border: none;
@@ -510,7 +498,7 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
   left: 12px;
   background-color: var(--color-white);
   color: var(--color-black);
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-sm);
   padding: 4px 8px;
   text-transform: uppercase;
 }
@@ -541,7 +529,7 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
 }
 
 .sec_new .txt-box > p:first-child {
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-sm);
   color: var(--color-gray);
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -549,14 +537,14 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
 }
 
 .sec_new .txt-box > p:nth-child(2) {
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-md);
   color: var(--color-black);
   font-weight: 500;
   margin-bottom: 4px;
 }
 
 .sec_new .txt-box > p:last-child {
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-sm);
   color: var(--color-gray);
 }
 
@@ -575,19 +563,19 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
 }
 
 .sec_best div > h3 {
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-lg);
   font-weight: 400;
   color: var(--color-black);
   margin-bottom: 12px;
 }
 
 .sec_best div > p {
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-md);
   color: var(--color-gray);
 }
 
 .sec_best > div > button {
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-sm);
   font-weight: 600;
   background-color: transparent;
   border: none;
@@ -663,7 +651,7 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
 }
 
 .sec_best > .best_list > div > .txt-box > .category {
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-sm);
   color: var(--color-gray);
   text-transform: uppercase;
   margin-bottom: 16px;
@@ -751,4 +739,111 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
   text-align: center;
 }
 
-/* sec03-Signature Best 끝 *//*# sourceMappingURL=main.css.map */
+/* sec03-Signature Best 끝 */
+.custom_sec {
+  padding-inline: 2rem;
+  padding-bottom: 8rem;
+}
+.custom_sec > div {
+  height: 550px;
+  width: 1440px;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  color: var(--color-white);
+  cursor: pointer;
+}
+.custom_sec > div .txt-box {
+  z-index: 10;
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 5rem;
+}
+.custom_sec > div .txt-box p:first-of-type {
+  font-size: var(--font-size-md);
+  letter-spacing: 0.4em;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.custom_sec > div .txt-box h2 {
+  font-size: var(--font-size-xl);
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+.custom_sec > div .txt-box p:nth-of-type(2) {
+  width: 100%;
+  max-width: 500px;
+  white-space: normal;
+  word-break: keep-all;
+  letter-spacing: 0;
+  line-height: 1.7;
+  color: var(--color-gray);
+  margin-bottom: 3rem;
+}
+.custom_sec > div .personal_btn {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding-bottom: 4px;
+}
+.custom_sec > div .personal_btn span {
+  border-bottom: 1px solid var(--color-white);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  transition: color 0.3s;
+}
+.custom_sec > div .personal_btn span:hover {
+  color: var(--color-gray);
+  opacity: 0.6;
+}
+.custom_sec > div .personal_btn .colors {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+.custom_sec > div .personal_btn .colors span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--color-gray);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.custom_sec > div .personal_btn .colors span:hover {
+  transform: scale(1.1);
+}
+.custom_sec > div .personal_btn .colors span:nth-child(1) {
+  background-color: #c2b280;
+}
+.custom_sec > div .personal_btn .colors span:nth-child(2) {
+  background-color: #3d2b1f;
+}
+.custom_sec > div .personal_btn .colors span:nth-child(3) {
+  background-color: #f4f3ed;
+}
+.custom_sec > div .personal_btn .colors span:nth-child(4) {
+  background-color: #111;
+}
+.custom_sec .img-box {
+  width: 45%;
+  height: 100%;
+  background-color: var(--color-lightgray);
+  display: flex;
+  position: absolute;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gray);
+  font-size: var(--font-size-md);
+  text-align: center;
+  transition: transform 1.5s, opacity 1.5s;
+}
+
+/* 커스터마이징 섹션 끝 *//*# sourceMappingURL=main.css.map */

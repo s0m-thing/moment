@@ -46,6 +46,7 @@ a {
     --font-size-ms: #{map-get(t.$font-sizes, ms)};
     --font-size-md: #{map-get(t.$font-sizes, md)};
     --font-size-lg: #{map-get(t.$font-sizes, lg)};
+    --font-size-xl: #{map-get(t.$font-sizes, xl)};
     --font-size-xxl: #{map-get(t.$font-sizes, xxl)};
 
     // 폰트 두께 재료
@@ -786,9 +787,131 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
 .sec_best .best-list-2 > .best-item > .txt-box {
     text-align: center;
 }
-
-
-
-
-
 /* sec03-Signature Best 끝 */
+
+// 커스터마이징 섹션 시작
+.custom_sec {
+    padding-inline: 2rem;
+    padding-bottom: 8rem;
+
+    > div {
+    height: 550px;
+    width: 1440px;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+    color: var(--color-white);
+    cursor: pointer;
+
+        .txt-box {
+            z-index: 10;
+            width: 55%;
+            display: flex;        // 내부 요소들을 세로로 정렬하기 위해 추가
+            flex-direction: column; 
+            padding: 0 5rem;
+
+            // 1번 p (서브타이틀)
+            p:first-of-type {
+                font-size: var(--font-size-md);
+                letter-spacing: 0.4em;
+                margin-bottom: 1rem;
+                text-transform: uppercase;
+            }
+
+            h2 {
+                font-size: var(--font-size-xl);
+                margin-bottom: 2rem;
+                line-height: 1.2;
+            }
+
+            // 2번 p (설명글 - 문제의 그 부분!)
+            p:nth-of-type(2) {
+                width: 100%;
+                max-width: 500px;    // 디자인적으로 적당한 선에서 끊어주기
+                white-space: normal; // 무조건 줄바꿈!
+                word-break: keep-all;
+                letter-spacing: 0;   // 본문 자간은 정상화
+                line-height: 1.7;
+                color: var(--color-gray);
+                margin-bottom: 3rem;
+            }
+        }
+
+        .personal_btn {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            padding-bottom: 4px;
+
+            span {
+                border-bottom: 1px solid var(--color-white);
+                font-size: var(--font-size-sm);
+                font-weight: var(--font-weight-bold);
+                text-transform: uppercase;
+                letter-spacing: 0.2em;
+                transition: color .3s;
+            }
+
+            span:hover {
+                color: var(--color-gray);
+                opacity: 0.6;
+            }
+
+            .colors {
+                display: flex;
+                gap: 0.75rem;
+                align-items: center;
+
+                span {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    border: 1px solid var(--color-gray);
+                    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+                    cursor: pointer;
+                    transition: transform .3s;
+                }
+
+                span:hover {
+                    transform: scale(1.1);
+                }
+
+                span:nth-child(1) {
+                    background-color: #c2b280;
+                }
+
+                span:nth-child(2) {
+                    background-color: #3d2b1f;
+                }
+
+                span:nth-child(3) {
+                    background-color: #f4f3ed;
+                }
+
+                span:nth-child(4) {
+                    background-color: #111;
+                }
+            }
+        }
+    }
+
+    .img-box {
+        width: 45%;
+        height: 100%;
+        background-color: var(--color-lightgray);
+        display: flex;
+        position: absolute;
+        right: 0;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-gray);
+        font-size: var(--font-size-md);
+        text-align: center;
+        transition: transform 1.5s, opacity 1.5s;
+    }
+}
+
+/* 커스터마이징 섹션 끝 */
