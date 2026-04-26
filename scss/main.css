@@ -32,65 +32,72 @@ a {
 }
 
 :root {
-  --font-size-xs: 9px;
-  --font-size-sm: 10px;
-  --font-size-ms: 12px;
-  --font-size-md: 14px;
-  --font-size-lg: 30px;
-  --font-size-xl: 48px;
-  --font-size-xxl: 72px;
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-bold: 700;
-  --color-lightgray: #e5e7eb;
-  --color-gray: #9CA3AF;
-  --color-darkgray: #6B7280;
+  --fs-xs: 9px;
+  --fs-sm: 10px;
+  --fs-ms: 12px;
+  --fs-md: 14px;
+  --fs-lg: 18px;
+  --fs-xl: 30px;
+  --fs-xxl: 48px;
+  --fs-xxxl: 72px;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
   --color-black: #111111;
+  --color-darkgray: #6B7280;
+  --color-gray: #9CA3AF;
+  --color-lightgray: #e5e7eb;
   --color-white: #fff;
   --color-beige: #faf9f6;
   --color-transparent: transparent;
-  /* header 토큰 */
-  --header-bg: var(--color-beige);
-  /* header icon */
-  --header-logo-fs: var(--font-size-lg);
-  --header-logo-fw: var(--font-weight-bold);
-  --header-logo-color: var(--color-black);
-  /* header menu */
-  --header-menu-fs: var(--font-size-md);
-  --header-menu-fw: var(--font-weight-medium);
-  --header-menu-color: var(--color-gray);
-  --header-menu-color-hover: var(--color-darkgray);
-  /* header icon */
-  --header-icon-color: var(--color-black);
-  --header-icon-color-hover: var(--color-gray);
-  --header-icon-txt-color: var(--color-white);
-  --header-icon-fs: var(--font-size-ms);
-  /* utility bar 토큰 */
-  --utility-bar-color: var(--color-gray);
-  --utility-bar-color-hover: var(--color-darkgray);
-  --utility-bar-fs: var(--font-size-sm);
-  --utility-bar-border-color: var(--color-lightgray);
-  /* hero banner 토큰 */
-  --hero-p-fs: var(--font-size-sm);
-  --hero-h2-fs: var(--font-size-xxl);
-  --hero-p-color: var(--color-gray);
-  --hero-h2-color: var(--color-black);
-  --hero-btn-border-color: var(--color-black);
-  --hero-btn-color: var(--color-black);
-  --hero-btn-color-hover: var(--color-white);
-  --hero-btn-fs: var(--font-size-sm);
-  --hero-btn-bg-transparent: var(--button-bg-transparent);
-  --hero-btn-bg-hover: var(--color-black);
-  --hero-arr-color: var(--color-gray);
-  /* anchor nav 토큰 */
-  --anchor-bg: var(--color-white);
-  --anchor-border-color: var(--color-lightgray);
-  --anchor-fw: var(--font-weight-bold);
-  --anchor-line-bg: var(--color-gray);
-  --anchor-line-bg-hover: var(--color-darkgray);
-  --anchor-name-color: var(--color-gray);
-  --anchor-name-color-hover: var(--color-darkgray);
-  --anchor-name-fw: var(--font-weight-bold);
+  --text-primary: var(--color-black);
+  --text-secondary: var(--color-darkgray);
+  --text-muted: var(--color-gray);
+  --text-light: var(--color-lightgray);
+  --text-inversed: var(--color-white);
+  --heading-xxxl: var(--fs-xxxl);
+  --heading-xxl: var(--fs-xxl);
+  --heading-xl: var(--fs-xl);
+  --heading-lg: var(--fs-lg);
+  --heading-md: var(--fs-md);
+  --heading-ms: var(--fs-ms);
+  --body-md: var(--fs-md);
+  --body-ms: var(--fs-ms);
+  --body-sm: var(--fs-sm);
+  --body-xs: var(--fs-xs);
+  --fw-heading-default: var(--fw-bold);
+  --fw-heading-light: var(--fw-regular);
+  --fw-body-default: var(--fw-regular);
+  --fw-body-strong: var(--fw-medium);
+  --bg-main: var(--color-beige);
+  --bg-white: var(--color-white);
+  --border-default: var(--color-lightgray);
+  --border-strong: var(--color-gray);
+  --btn-fs: var(--body-sm);
+  --btn-fw: var(--fw-bold);
+  --btn-outline-bg: var(--color-transparent);
+  --btn-outline-text: var(--color-black);
+  --btn-outline-border: var(--color-black);
+  --btn-outline-bg-hover: var(--color-black);
+  --btn-outline-text-hover: var(--color-white);
+  --btn-outline-white-bg: var(--color-white);
+  --btn-outline-white-text: var(--color-black);
+  --btn-outline-white-border: var(--color-black);
+  --btn-outline-white-border-hover: var(--color-black);
+  --btn-line-text: var(--color-black);
+  --btn-line-border: var(--color-black);
+  --btn-line-text-hover: var(--color-gray);
+  --btn-line-inverse-text: var(--color-white);
+  --btn-line-inverse-border: var(--color-white);
+  --btn-line-inverse-text-hover: var(--color-gray);
+  --divider-color: var(--color-lightgray);
+  --line-color: var(--color-gray);
+  --line-color-hover: var(--color-darkgray);
+  --title-fs: var(--heading-xl);
+  --title-fw: var(--fw-heading-light);
+  --title-color: var(--text-primary);
+  --subtitle-fs: var(--heading-md);
+  --subtitle-color: var(--text-muted);
   /* ADD TO CART 버튼 */
   --button-color-border-default: var(--color-gray);
   --button-color-border-hover: var(--color-black);
@@ -182,10 +189,78 @@ h2 {
   margin: 0 auto;
 }
 
+.btn-outline {
+  background-color: var(--btn-outline-bg);
+  color: var(--btn-outline-text);
+  border: 1px solid var(--btn-outline-border);
+  padding: 12px 24px;
+  font-size: var(--btn-fs);
+  font-weight: var(--btn-fw);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-outline:hover {
+  background-color: var(--btn-outline-bg-hover);
+  color: var(--btn-outline-text-hover);
+}
+.btn-outline.sm {
+  padding: 8px 20px;
+}
+.btn-outline.lg {
+  padding: 16px 32px;
+}
+
+.btn-outline-white {
+  background-color: var(--btn-outline-white-bg);
+  color: var(--btn-outline-white-text);
+  border: 1px solid var(--btn-outline-white-border);
+  padding: 8px 0;
+  font-size: var(--btn-fs);
+  font-weight: var(--btn-fw);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-outline-white:hover {
+  border-color: var(--btn-outline-white-border-hover);
+}
+
+.btn-line {
+  background-color: transparent;
+  color: var(--btn-line-text);
+  border: none;
+  border-bottom: 1px solid var(--btn-line-border);
+  padding-bottom: 8px;
+  font-size: var(--btn-fs);
+  font-weight: var(--btn-fw);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-line:hover {
+  color: var(--btn-line-text-hover);
+}
+
+.btn-line-inverse {
+  color: var(--btn-line-inverse-text);
+  border: none;
+  border-bottom: 1px solid var(--btn-line-inverse-border);
+  padding-bottom: 8px;
+  font-size: var(--btn-fs);
+  font-weight: var(--btn-fw);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-line-inverse:hover {
+  color: var(--btn-line-inverse-text-hover);
+}
+
 /* 라이브러리 끝 */
 /* 헤더 시작 */
 header {
-  background-color: var(--header-bg);
+  background-color: var(--bg-main);
   position: sticky;
   top: 0;
   left: 0;
@@ -196,10 +271,10 @@ header > .utility_bar {
   padding: 8px 2px;
   display: flex;
   justify-content: space-between;
-  font-size: var(--utility-bar-fs);
-  color: var(--utility-bar-color);
+  font-size: var(--body-sm);
+  color: var(--text-muted);
   box-sizing: border-box;
-  border-bottom: 1px solid var(--utility-bar-border-color);
+  border-bottom: 1px solid var(--border-default);
 }
 
 header > .utility_bar .menu_1 {
@@ -212,7 +287,7 @@ header > .utility_bar .menu_1:last-child {
 }
 
 header > .utility_bar .menu_1:hover {
-  color: var(--utility-bar-color-hover);
+  color: var(--text-secondary);
 }
 
 header > .main_header {
@@ -224,9 +299,9 @@ header > .main_header {
 }
 
 header > .main_header > .logo {
-  font-size: var(--header-logo-fs);
-  font-weight: var(--header-logo-fw);
-  color: var(--header-logo-color);
+  font-size: var(--heading-xl);
+  font-weight: var(--fw-heading-default);
+  color: var(--text-primary);
   cursor: pointer;
 }
 
@@ -244,14 +319,14 @@ header > .main_header > .gnb > ul {
 header > .main_header > .gnb > ul > li > a {
   display: block;
   padding: 40px;
-  color: var(--header-menu-color);
-  font-size: var(--header-menu-fs);
-  font-weight: var(--header-menu-fw);
+  color: var(--text-muted);
+  font-size: var(--heading-md);
+  font-weight: var(--fw-body-strong);
   transition: color 0.3s;
 }
 
 header > .main_header > .gnb > ul > li > a:hover {
-  color: var(--header-menu-color-hover);
+  color: var(--text-secondary);
 }
 
 header > .main_header > .holder {
@@ -262,13 +337,13 @@ header > .main_header > .holder {
 }
 
 header > .main_header > .holder > .icon {
-  color: var(--header-icon-color);
+  color: var(--text-primary);
   cursor: pointer;
   transition: color 0.3s;
 }
 
 header > .main_header > .holder > .icon:hover {
-  color: var(--header-icon-color-hover);
+  color: var(--text-muted);
 }
 
 header > .main_header > .holder > .icon_cart {
@@ -279,20 +354,20 @@ header > .main_header > .holder > .icon_cart > .circle {
   position: absolute;
   top: -5px;
   left: 15px;
-  background-color: var(--header-icon-color);
+  background-color: var(--text-primary);
   width: 14px;
   height: 14px;
   border-radius: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--header-icon-txt-color);
-  font-size: var(--header-icon-fs);
+  color: var(--text-inversed);
+  font-size: var(--heading-ms);
   transition: all 0.3s;
 }
 
 header > .main_header > .holder > .icon_cart:hover > .circle {
-  background-color: var(--header-icon-color-hover);
+  background-color: var(--text-muted);
 }
 
 /* 헤더 끝 */
@@ -315,33 +390,16 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
 }
 
 .hero_banner > .txt_box > p {
-  font-size: var(--hero-p-fs);
-  color: var(--hero-p-color);
+  font-size: var(--body-sm);
+  color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 4px;
 }
 
 .hero_banner > .txt_box > h2 {
-  font-size: var(--hero-h2-fs);
-  color: var(--hero-h2-color);
-  margin: 0 0 24px 0;
-}
-
-.hero_banner > .txt_box > button {
-  border: 1px solid var(--hero-btn-border-color);
-  background-color: var(--hero-btn-bg-transparent);
-  padding: 16px 48px;
-  font-size: var(--hero-btn-fs);
-  line-height: 15px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.hero_banner > .txt_box > button:hover {
-  background-color: var(--hero-btn-bg-hover);
-  color: var(--hero-btn-color-hover);
+  font-size: var(--heading-xxxl);
+  color: var(--text-primary);
+  margin-bottom: 24px;
 }
 
 .hero_banner > .arr {
@@ -366,8 +424,8 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
 /* sec01 끝 */
 /* 앵커 네비게이션 섹션 시작*/
 .anchor_nav {
-  background-color: var(--anchor-bg);
-  border-bottom: 1px solid var(--anchor-border-color);
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--border-default);
   margin: 0 auto;
   padding: 24px 0;
   position: sticky;
@@ -391,23 +449,23 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
 .anchor_nav a > .anchor_line {
   width: 40px;
   height: 1px;
-  background-color: var(--anchor-line-bg);
+  background-color: var(--line-color);
   margin-right: 12px;
   transition: all 0.3s;
 }
 
 .anchor_nav a:hover > .anchor_line {
-  background-color: var(--anchor-line-bg-hover);
+  background-color: var(--line-color-hover);
 }
 
 .anchor_nav a > .anchor_name {
-  color: var(--anchor-name-color);
-  font-weight: var(--anchor-name-fw);
+  color: var(--text-muted);
+  font-weight: var(--fw-heading-default);
   transition: color 0.3s;
 }
 
 .anchor_nav a:hover > .anchor_name {
-  color: var(--anchor-name-color-hover);
+  color: var(--text-secondary);
 }
 
 /* 앵커 네비게이션 섹션 끝*/
@@ -425,13 +483,14 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
 }
 
 #travel-objects h3 {
-  font-size: var(--font-size-lg);
+  font-size: var(--heading-xl);
+  font-weight: var(--fw-heading-default);
 }
 
 #travel-objects .line {
   width: 33.3333333333%;
   height: 1px;
-  background-color: var(--border-gray);
+  background-color: var(--divider-color);
 }
 
 /* 타이틀텍스트 1 끝 */
@@ -447,31 +506,16 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
   margin-bottom: 4rem;
 }
 
-.sec_new div > h3 {
-  font-size: var(--font-size-lg);
-  font-weight: 400;
-  color: var(--color-black);
+.sec_new div > .title {
+  font-size: var(--title-fs);
+  font-weight: var(--title-fw);
+  color: var(--title-color);
   margin-bottom: 12px;
 }
 
-.sec_new div > p {
-  font-size: var(--font-size-md);
-  color: var(--color-gray);
-}
-
-.sec_new > div > button {
-  font-size: var(--font-size-sm);
-  font-weight: 600;
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid var(--color-gray);
-  padding-bottom: 8px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.sec_new > div > button:hover {
-  color: var(--color-darkgray);
+.sec_new div > .subtitle {
+  font-size: var(--subtitle-fs);
+  color: var(--subtitle-color);
 }
 
 .sec_new > .new_list {
