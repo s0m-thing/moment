@@ -50,6 +50,10 @@ a {
   --color-white: #fff;
   --color-beige: #faf9f6;
   --color-transparent: transparent;
+  --spacing-xs: 4px;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.15);
   --text-primary: var(--color-black);
   --text-secondary: var(--color-darkgray);
   --text-muted: var(--color-gray);
@@ -98,6 +102,7 @@ a {
   --title-color: var(--text-primary);
   --subtitle-fs: var(--heading-md);
   --subtitle-color: var(--text-muted);
+  --card-shadow: var(--shadow-md);
   /* ADD TO CART 버튼 */
   --button-color-border-default: var(--color-gray);
   --button-color-border-hover: var(--color-black);
@@ -110,13 +115,13 @@ a {
   --img-boxcolor: var(--color-gray);
   --img-box-fs: var(--font-size-md);
   /* pro-text-box */
-  --pro-category-color: var(--color-gray);
-  --pro-category-fs: var(--font-size-sm);
-  --pro-title-color: var(--color-black);
-  --pro-title-fs: var(--font-size-md);
-  --pro-title-fw: var(--font-weight-medium);
-  --pro-price-color: var(--color-gray);
-  --pro-price-fs: var(--font-size-sm);
+  --pro-category-color: var(--text-muted);
+  --pro-category-fs: var(--body-sm);
+  --pro-title-color: var(--text-primary);
+  --pro-title-fs: var(--body-md);
+  --pro-title-fw: var(--fw-body-strong);
+  --pro-price-color: var(--text-muted);
+  --pro-price-fs: var(--body-ms);
   --pro-gap-size: var(--spacing-xs);
 }
 
@@ -532,7 +537,7 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
   position: relative;
   aspect-ratio: 3/4;
   overflow: hidden;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: var(--card-shadow);
   margin-bottom: 24px;
 }
 
@@ -540,9 +545,9 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
   position: absolute;
   top: 12px;
   left: 12px;
-  background-color: var(--color-white);
-  color: var(--color-black);
-  font-size: var(--font-size-sm);
+  background-color: var(--bg-white);
+  color: var(--text-primary);
+  font-size: var(--body-sm);
   padding: 4px 8px;
   text-transform: uppercase;
 }
@@ -553,7 +558,7 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
   right: 12px;
   background-color: transparent;
   border: none;
-  color: var(--color-gray);
+  color: var(--text-muted);
   font-size: 18px;
   opacity: 0;
   transition: all 0.3s;
@@ -572,24 +577,24 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
   text-align: center;
 }
 
-.sec_new .txt-box > p:first-child {
-  font-size: var(--font-size-sm);
-  color: var(--color-gray);
+.sec_new .pro-text-box > .category {
+  font-size: var(--pro-category-fs);
+  color: var(--pro-category-color);
   text-transform: uppercase;
   letter-spacing: 4px;
-  margin-bottom: 4px;
+  margin-bottom: var(--pro-gap-size);
 }
 
-.sec_new .txt-box > p:nth-child(2) {
-  font-size: var(--font-size-md);
-  color: var(--color-black);
-  font-weight: 500;
-  margin-bottom: 4px;
+.sec_new .pro-text-box > .title {
+  font-size: var(--pro-title-fs);
+  color: var(--pro-title-color);
+  font-weight: var(--pro-title-fw);
+  margin-bottom: var(--pro-gap-size);
 }
 
-.sec_new .txt-box > p:last-child {
-  font-size: var(--font-size-sm);
-  color: var(--color-gray);
+.sec_new .pro-text-box > .price {
+  font-size: var(--pro-price-fs);
+  color: var(--pro-price-color);
 }
 
 /* sec02-New Arrivals 끝 */

@@ -64,6 +64,14 @@ a {
     --color-beige: #{map-get(t.$colors, beige)};
     --color-transparent: #{map-get(t.$colors, transparent)};
 
+    // 여백 재료
+    --spacing-xs: 4px; //수정
+
+    // 그림자 재료
+    --shadow-sm: #{map-get(t.$shadows, sm)};
+    --shadow-md: #{map-get(t.$shadows, md)};
+    --shadow-lg: #{map-get(t.$shadows, lg)};
+
 
     // Semantic 토큰 정의
 
@@ -151,6 +159,9 @@ a {
     --subtitle-fs: var(--heading-md);
     --subtitle-color: var(--text-muted);
 
+    // 그림자
+    --card-shadow: var(--shadow-md);
+
 
 
 
@@ -170,18 +181,17 @@ a {
 
 
     /* pro-text-box */
-    --pro-category-color: var(--color-gray);
-    --pro-category-fs: var(--font-size-sm);
+    --pro-category-color: var(--text-muted);
+    --pro-category-fs: var(--body-sm);
 
-    --pro-title-color: var(--color-black);
-    --pro-title-fs: var(--font-size-md);
-    --pro-title-fw: var(--font-weight-medium);
+    --pro-title-color: var(--text-primary);
+    --pro-title-fs: var(--body-md);
+    --pro-title-fw: var(--fw-body-strong);
 
-    --pro-price-color: var(--color-gray);
-    --pro-price-fs: var(--font-size-sm);
+    --pro-price-color: var(--text-muted);
+    --pro-price-fs: var(--body-ms);
 
     --pro-gap-size: var(--spacing-xs);
-    
 }
 
 
@@ -619,7 +629,7 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
     position: relative;
     aspect-ratio: 3 / 4;
     overflow: hidden;
-    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    box-shadow: var(--card-shadow);
     margin-bottom: 24px;
 }
 
@@ -627,9 +637,9 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
     position: absolute;
     top: 12px;
     left: 12px;
-    background-color: var(--color-white);
-    color: var(--color-black);
-    font-size: var(--font-size-sm);
+    background-color: var(--bg-white);
+    color: var(--text-primary);
+    font-size: var(--body-sm);
     padding: 4px 8px;
     text-transform: uppercase;
 }   
@@ -640,7 +650,7 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
     right: 12px;
     background-color: transparent;
     border: none;
-    color: var(--color-gray);
+    color: var(--text-muted);
     font-size: 18px;
     opacity: 0;
     transition: all .3s;
@@ -655,28 +665,28 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
     color: red;
 }
 
-.sec_new .txt-box {
+.sec_new .pro-text-box {
     text-align: center;
 }
 
-.sec_new .txt-box > p:first-child {
-    font-size: var(--font-size-sm);
-    color: var(--color-gray);
+.sec_new .pro-text-box > .category {
+    font-size: var(--pro-category-fs);
+    color: var(--pro-category-color);
     text-transform: uppercase;
     letter-spacing: 4px;
-    margin-bottom: 4px;
+    margin-bottom: var(--pro-gap-size);
 }
 
-.sec_new .txt-box > p:nth-child(2) {
-    font-size: var(--font-size-md);
-    color: var(--color-black);
-    font-weight: 500;
-    margin-bottom: 4px;
+.sec_new .pro-text-box > .title {
+    font-size: var(--pro-title-fs);
+    color: var(--pro-title-color);
+    font-weight: var(--pro-title-fw);
+    margin-bottom: var(--pro-gap-size);
 }
 
-.sec_new .txt-box > p:last-child {
-    font-size: var(--font-size-sm);
-    color: var(--color-gray);
+.sec_new .pro-text-box > .price {
+    font-size: var(--pro-price-fs);
+    color: var(--pro-price-color);
 }
 /* sec02-New Arrivals 끝 */
 

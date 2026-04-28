@@ -38,6 +38,7 @@ $colors: (
   black: #111111,
   white: #fff,
   beige: #faf9f6,
+  red: 
   transparent: transparent
 );
 
@@ -48,4 +49,10 @@ $spacing: (
   lg: 4rem,
   xl: 6rem,
   xxl: 8rem
+);
+
+$shadows: (
+  sm: 0 2px 8px rgba(0, 0, 0, 0.05),
+  md: 0 10px 20px rgba(0, 0, 0, 0.1),
+  lg: 0 20px 40px rgba(0, 0, 0, 0.15)
 );
