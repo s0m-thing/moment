@@ -837,4 +837,24 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
   justify-content: center;
 }
 
-/* 커스터마이징 섹션 끝 *//*# sourceMappingURL=main.css.map */
+/* 커스터마이징 섹션 끝 */
+.diary_banner {
+  background-color: #f5f4f0;
+  padding-inline: 36px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-top: 1px solid var(--border-default);
+}
+.diary_banner .img-box {
+  position: absolute;
+  opacity: 0.6;
+}
+.diary_banner .txt-box {
+  display: relative;
+  padding-block: 32px;
+  text-align: center;
+  z-index: 10;
+}/*# sourceMappingURL=main.css.map */

@@ -958,3 +958,55 @@ header > .main_header > .holder > .icon_cart:hover > .circle {
 }
 
 /* 커스터마이징 섹션 끝 */
+
+// 다이어리 배너 시작
+.diary_banner {
+    background-color: #f5f4f0;
+    padding-inline: 36px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-top: 1px solid var(--border-default);
+
+    .img-box {
+        position: absolute;
+        opacity: 0.6;
+    }
+
+    .txt-box {
+        display: relative;
+        padding-block: 32px;
+        text-align: center;
+        z-index: 10;
+
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 다이어리 배너 끝
